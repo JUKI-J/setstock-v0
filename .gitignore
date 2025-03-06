@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### /resources/config ###
+/src/main/resources/config/
+/src/main/resources/config/database.yaml
+/src/main/resources/config/kis-openapi.yaml
