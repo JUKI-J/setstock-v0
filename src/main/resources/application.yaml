@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: setstock-v0
+  config:
+    import:
+      - classpath:config/database.yaml
+      - classpath:config/kis-openapi.yaml
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  cache:
+    type: caffeine
+    caffeine:
+      spec: maximumSize=500,expireAfterWrite=30m
+
+server:
+  port: 8080
